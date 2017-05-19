@@ -7,6 +7,8 @@ class rectangle : public forme
 {
     protected:
     point p1,p2;
+    int length;
+    int width;
     int m_couleur;
     public:
     rectangle(int x1 = 0,int x2 = 0,int y1 = 0,int y2 = 0);
@@ -20,6 +22,8 @@ class rectangle : public forme
     void affiche();
     point getP1();
     point getP2();
+    int getLength();
+    void setColor(int);
     bool dans_rect(int, int);
     bool dans_rect(point);
 };

@@ -4,7 +4,12 @@
 #include "rectangle.h"
 #include "brique.h"
 #include "murbrique.h"
+#include "raquette.h"
 #include <list>
+#define KEY_UP 72
+#define KEY_DOWN 80
+#define KEY_LEFT 75
+#define KEY_RIGHT 77
 
 using namespace std;
 /* bouton, menu, brique 1, mini exemple
@@ -210,6 +215,8 @@ class menu2{
 
 int main()
 {
+    int e,raquetteColor;
+    int flagQuit = 0;
     allegro_init();
     install_keyboard();   //installe le clavier
     install_mouse();
@@ -222,8 +229,9 @@ int main()
 
     set_mouse_sprite(NULL);
     show_mouse(screen);
-    set_keyboard_rate(0,0);
+    set_keyboard_rate(10,20);
 
+    /*
     list<brique*> liste_briques;
 
     point x=point(20,20);
@@ -238,15 +246,28 @@ int main()
         for(int j = 0; j < 60; j = j+30){
             p_brique = bite.genere_brique(i,j,i+30,j+50,makecol(100,100,100),1);
             liste_briques.push_front(p_brique);
-            cout << p_brique->get
-            j = j+2;
+            cout << liste_briques.get();
+            //j = j+2;
         }
-        i=i+2;
+        //i=i+2;
     }
 
     murBrique test = murBrique(liste_briques);
     test.affiche();
-
-    readkey();
-    exit(EXIT_SUCCESS) ;
+*/
+    raquetteColor = makecol(234,124,12);
+    point a(10,10);
+    point b(70,30);
+    raquette raquette(a,b,raquetteColor);
+    raquette.affiche();
+while(!flagQuit){
+    e = readkey();
+    if(e==15131){
+        flagQuit = 1;
+        exit(EXIT_SUCCESS);
+    }
+    else{
+        raquette.deplace(e,5);
+    }
+}
 }END_OF_MAIN() ;

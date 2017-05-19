@@ -48,10 +48,14 @@
 		<Unit filename="murbrique.h" />
 		<Unit filename="point.cpp" />
 		<Unit filename="point.h" />
+		<Unit filename="raquette.cpp" />
+		<Unit filename="raquette.h" />
 		<Unit filename="rectangle.cpp" />
 		<Unit filename="rectangle.h" />
 		<Extensions>
 			<debugger />
+			<code_completion />
+			<envvars />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>
