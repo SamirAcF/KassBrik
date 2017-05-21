@@ -17,23 +17,11 @@ int point::gety() const{
 }
 
 void point::setx(int nouv){
-    if(x<10){
-        x = 10;
+    if(nouv<0){
+        x = 0;
     }
-    else if(x > 590){
-        x = 590;
-    }
-    else{
-        x = nouv;
-    }
-}
-
-void point::setx(int nouv,int depl){
-    if(x-depl<10){
-        x = 10;
-    }
-    else if(x+depl > 590){
-        x = 590;
+    else if(nouv> 600){
+        x = 600;
     }
     else{
         x = nouv;

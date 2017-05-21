@@ -97,3 +97,70 @@
 	"rectangle.h"
 	"forme.h"
 
+1495163018 source:c:\users\cfr\desktop\samir\c\kassbrik\brique.cpp
+	"brique.h"
+	<allegro.h>
+	<iostream>
+
+1495148354 c:\users\cfr\desktop\samir\c\kassbrik\brique.h
+	"point.h"
+	"rectangle.h"
+	"forme.h"
+
+1495160838 c:\users\cfr\desktop\samir\c\kassbrik\point.h
+
+1495157356 c:\users\cfr\desktop\samir\c\kassbrik\rectangle.h
+	"point.h"
+	"forme.h"
+
+1495148354 c:\users\cfr\desktop\samir\c\kassbrik\forme.h
+
+1495148354 source:c:\users\cfr\desktop\samir\c\kassbrik\forme.cpp
+	"forme.h"
+
+1495385889 source:c:\users\cfr\desktop\samir\c\kassbrik\main.cpp
+	<iostream>
+	<allegro.h>
+	"point.h"
+	"rectangle.h"
+	"brique.h"
+	"murbrique.h"
+	"raquette.h"
+	"balle.h"
+	<list>
+
+1495148354 c:\users\cfr\desktop\samir\c\kassbrik\murbrique.h
+	<list>
+	"brique.h"
+
+1495384828 c:\users\cfr\desktop\samir\c\kassbrik\raquette.h
+	"point.h"
+	"rectangle.h"
+	"forme.h"
+
+1495148354 source:c:\users\cfr\desktop\samir\c\kassbrik\murbrique.cpp
+	<list>
+	"murBrique.h"
+
+1495384291 source:c:\users\cfr\desktop\samir\c\kassbrik\point.cpp
+	<allegro.h>
+	<iostream>
+	"point.h"
+
+1495384250 source:c:\users\cfr\desktop\samir\c\kassbrik\raquette.cpp
+	"raquette.h"
+	<allegro.h>
+	<iostream>
+
+1495157545 source:c:\users\cfr\desktop\samir\c\kassbrik\rectangle.cpp
+	"rectangle.h"
+
+1495165790 source:c:\users\cfr\desktop\samir\c\kassbrik\balle.cpp
+	<iostream>
+	<allegro.h>
+	"balle.h"
+
+1495165737 c:\users\cfr\desktop\samir\c\kassbrik\balle.h
+	"forme.h"
+	"point.h"
+

@@ -5,6 +5,7 @@
 #include "brique.h"
 #include "murbrique.h"
 #include "raquette.h"
+#include "balle.h"
 #include <list>
 #define KEY_UP 72
 #define KEY_DOWN 80
@@ -231,6 +232,8 @@ int main()
     show_mouse(screen);
     set_keyboard_rate(10,20);
 
+/**********************************************TEST MUR DE BRIQUE*********************************************/
+
     /*
     list<brique*> liste_briques;
 
@@ -255,6 +258,8 @@ int main()
     murBrique test = murBrique(liste_briques);
     test.affiche();
 */
+/*****************************************************TEST RAQUETTE****************************************************/
+
     raquetteColor = makecol(234,124,12);
     point a(10,10);
     point b(70,30);
@@ -270,4 +275,6 @@ while(!flagQuit){
         raquette.deplace(e,5);
     }
 }
+//point b(70,30);
+//balle bal(50,50,30);
 }END_OF_MAIN() ;
