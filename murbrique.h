@@ -13,6 +13,8 @@ class murBrique : public forme{
         ~murBrique();
         void affiche();
         void collision(int, int);
+        void ajoutBrique(int,int,int,int);
+        void construireMur(int,int);
         //bool selection(int,int){return false;}
 
 };

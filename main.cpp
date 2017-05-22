@@ -234,7 +234,7 @@ int main()
 
 /**********************************************TEST MUR DE BRIQUE*********************************************/
 
-    /*
+
     list<brique*> liste_briques;
 
     point x=point(20,20);
@@ -243,21 +243,14 @@ int main()
     brique * p_brique;
 
 
+    murBrique test = murBrique(liste_briques);
+
     brique bite;
 
-    for (int i = 0; i < 100; i=i+50){
-        for(int j = 0; j < 60; j = j+30){
-            p_brique = bite.genere_brique(i,j,i+30,j+50,makecol(100,100,100),1);
-            liste_briques.push_front(p_brique);
-            cout << liste_briques.get();
-            //j = j+2;
-        }
-        //i=i+2;
-    }
+    test.construireMur(5,7);
 
-    murBrique test = murBrique(liste_briques);
-    test.affiche();
-*/
+        test.affiche();
+        readkey();
 /*****************************************************TEST RAQUETTE****************************************************/
 /*
     raquetteColor = makecol(234,124,12);
@@ -275,12 +268,18 @@ while(!flagQuit){
         raquette.deplace(e,5);
     }
 }
-*/
-/****************************************************TESTS BALLE*********************************************************/
-
+/*****************************************************TESTS BALLE********************************************************/
+/*
         point b(mouse_x,mouse_y);
         balle ball(SCREEN_H/2,SCREEN_W/2,SCREEN_H/20);
         while(1){
         ball.deplace(mouse_x,mouse_y,1);
+        test.affiche();
         }
+    e = readkey();
+    if(e==15131){
+        flagQuit = 1;
+        exit(EXIT_SUCCESS);
+    }
+*/
 }END_OF_MAIN() ;
