@@ -1,28 +1,35 @@
 # depslib dependency file v1.0
-1495122183 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\main.cpp
+1495451138 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\main.cpp
 	<iostream>
 	<allegro.h>
 	"point.h"
 	"rectangle.h"
 	"brique.h"
+	"murbrique.h"
+	"raquette.h"
+	"balle.h"
+	<list>
 
-1495116712 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\point.h
+1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\point.h
 
-1495126645 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.h
+1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.h
 	"point.h"
 	"forme.h"
 
-1495116711 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\point.cpp
+1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\point.cpp
+	<allegro.h>
+	<iostream>
 	"point.h"
 
-1495126645 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.cpp
+1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.cpp
 	"rectangle.h"
 
 1495120166 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\forme.h
 
-1495129470 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.cpp
+1495129616 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.cpp
 	"brique.h"
 	<allegro.h>
+	<iostream>
 
 1495126536 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.h
 	"point.h"
@@ -32,11 +39,11 @@
 1495120166 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\forme.cpp
 	"forme.h"
 
-1495123244 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.cpp
+1495447591 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.cpp
 	<list>
 	"murBrique.h"
 
-1495122811 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.h
+1495448277 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.h
 	<list>
 	"brique.h"
 
@@ -163,4 +170,90 @@
 1495463452 c:\users\cfr\desktop\samir\c\kassbrik\balle.h
 	"forme.h"
 	"point.h"
+
+1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\balle.cpp
+	<iostream>
+	<allegro.h>
+	"balle.h"
+
+1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\balle.h
+	"forme.h"
+	"point.h"
+
+1495120166 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\forme.h
+
+1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\point.h
+
+1495129616 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\brique.cpp
+	"brique.h"
+	<allegro.h>
+	<iostream>
+
+1495126536 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\brique.h
+	"point.h"
+	"rectangle.h"
+	"forme.h"
+
+1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\rectangle.h
+	"point.h"
+	"forme.h"
+
+1495120166 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\forme.cpp
+	"forme.h"
+
+1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\point.cpp
+	<allegro.h>
+	<iostream>
+	"point.h"
+
+1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\raquette.cpp
+	"raquette.h"
+	<allegro.h>
+	<iostream>
+
+1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\raquette.h
+	"point.h"
+	"rectangle.h"
+	"forme.h"
+
+1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\rectangle.cpp
+	"rectangle.h"
+
+1495447492 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\main.cpp
+	<iostream>
+	<allegro.h>
+	"point.h"
+	"rectangle.h"
+	"brique.h"
+	"murbrique.h"
+	"raquette.h"
+	"balle.h"
+	<list>
+
+1495447257 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\murbrique.h
+	<list>
+	"brique.h"
+
+1495447591 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\kassbrik\murbrique.cpp
+	<list>
+	"murBrique.h"
+
+1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\balle.cpp
+	<iostream>
+	<allegro.h>
+	"balle.h"
+
+1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\balle.h
+	"forme.h"
+	"point.h"
+
+1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\raquette.h
+	"point.h"
+	"rectangle.h"
+	"forme.h"
+
+1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\raquette.cpp
+	"raquette.h"
+	<allegro.h>
+	<iostream>
 
