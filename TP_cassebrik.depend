@@ -118,7 +118,7 @@
 1495148354 source:c:\users\cfr\desktop\samir\c\kassbrik\forme.cpp
 	"forme.h"
 
-1495385889 source:c:\users\cfr\desktop\samir\c\kassbrik\main.cpp
+1495389065 source:c:\users\cfr\desktop\samir\c\kassbrik\main.cpp
 	<iostream>
 	<allegro.h>
 	"point.h"
@@ -147,7 +147,7 @@
 	<iostream>
 	"point.h"
 
-1495384250 source:c:\users\cfr\desktop\samir\c\kassbrik\raquette.cpp
+1495386185 source:c:\users\cfr\desktop\samir\c\kassbrik\raquette.cpp
 	"raquette.h"
 	<allegro.h>
 	<iostream>
@@ -155,12 +155,12 @@
 1495157545 source:c:\users\cfr\desktop\samir\c\kassbrik\rectangle.cpp
 	"rectangle.h"
 
-1495165790 source:c:\users\cfr\desktop\samir\c\kassbrik\balle.cpp
+1495389106 source:c:\users\cfr\desktop\samir\c\kassbrik\balle.cpp
 	<iostream>
 	<allegro.h>
 	"balle.h"
 
-1495165737 c:\users\cfr\desktop\samir\c\kassbrik\balle.h
+1495389127 c:\users\cfr\desktop\samir\c\kassbrik\balle.h
 	"forme.h"
 	"point.h"
 

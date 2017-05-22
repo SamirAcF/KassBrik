@@ -259,7 +259,7 @@ int main()
     test.affiche();
 */
 /*****************************************************TEST RAQUETTE****************************************************/
-
+/*
     raquetteColor = makecol(234,124,12);
     point a(10,10);
     point b(70,30);
@@ -275,6 +275,12 @@ while(!flagQuit){
         raquette.deplace(e,5);
     }
 }
-//point b(70,30);
-//balle bal(50,50,30);
+*/
+/****************************************************TESTS BALLE*********************************************************/
+
+        point b(mouse_x,mouse_y);
+        balle ball(SCREEN_H/2,SCREEN_W/2,SCREEN_H/20);
+        while(1){
+        ball.deplace(mouse_x,mouse_y,1);
+        }
 }END_OF_MAIN() ;

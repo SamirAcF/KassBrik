@@ -3,7 +3,7 @@
 #include "forme.h"
 #include "point.h"
 
-class balle : public forme {
+class balle {
     int xcentre;
     int ycentre;
     int rayon;
@@ -14,7 +14,14 @@ public:
     balle(point,int);
     balle(point,int,int);
     balle(int,int,int,int);
+    balle(int,int,int);
+    int getxCentre();
+    int getyCentre();
+    int getRayon();
     void collision();
+    void affiche();
+    void efface();
+    void deplace(int, int, int);
     ~balle();
 };
 
