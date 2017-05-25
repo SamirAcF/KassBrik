@@ -7,12 +7,12 @@
 #include "raquette.h"
 #include "balle.h"
 #include <list>
-#define KEY_UP 72
-#define KEY_DOWN 80
-#define KEY_LEFT 75
-#define KEY_RIGHT 77
+
+
+BITMAP* bmap;
 
 using namespace std;
+
 /* bouton, menu, brique 1, mini exemple
 
 class bouton : public forme{
@@ -231,6 +231,7 @@ int main()
     set_mouse_sprite(NULL);
     show_mouse(screen);
     set_keyboard_rate(10,20);
+    bmap = create_bitmap(640,480);
 
 /**********************************************TEST MUR DE BRIQUE*********************************************/
 
@@ -246,11 +247,20 @@ int main()
     murBrique test = murBrique(liste_briques);
 
     brique bite;
-
-    test.construireMur(5,7);
-
+    test.faireCadre();
+    test.construireMur(7,7);
+        int i = 300;
         test.affiche();
+        while(i >0){
+        cout<<"i : "<<i<<endl;
+        point pa(i,i);
         readkey();
+        test.interaction(pa);
+        test.affiche();
+        blit(bmap, screen,0,0,0,0,640,480);
+        readkey();
+        --i;
+        }
 /*****************************************************TEST RAQUETTE****************************************************/
 /*
     raquetteColor = makecol(234,124,12);
@@ -282,4 +292,6 @@ while(!flagQuit){
         exit(EXIT_SUCCESS);
     }
 */
+
+      destroy_bitmap(bmp);
 }END_OF_MAIN() ;

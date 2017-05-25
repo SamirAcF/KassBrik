@@ -15,7 +15,6 @@ class brique : public rectangle{
         brique(point,point,int,int);
         brique* genere_brique(int,int,int,int,int,int);
         ~brique();
-        virtual void affiche();
         //virtual bool action()=0;
         //bool selection(int,int){return false;}
 };

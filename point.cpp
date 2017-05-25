@@ -29,7 +29,15 @@ void point::setx(int nouv){
 }
 
 void point::sety(int nouv){
-    y = nouv;
+    if(nouv<0){
+        y = 0;
+    }
+    else if(nouv> 480){
+        y = 480;
+    }
+    else{
+        y = nouv;
+    }
 }
 
 void point::deplace(int dep_x, int dep_y){

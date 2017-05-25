@@ -15,13 +15,13 @@
 					<Add option="-g" />
 				</Compiler>
 				<Linker>
-					<Add library="../../allegro-mingw-4.2.2/lib/libaldat.a" />
-					<Add library="../../allegro-mingw-4.2.2/lib/liballd.a" />
-					<Add library="../../allegro-mingw-4.2.2/lib/liballd_s.a" />
-					<Add library="../../allegro-mingw-4.2.2/lib/liballeg.a" />
-					<Add library="../../allegro-mingw-4.2.2/lib/liballeg_s.a" />
-					<Add library="../../allegro-mingw-4.2.2/lib/liballp.a" />
-					<Add library="../../allegro-mingw-4.2.2/lib/liballp_s.a" />
+					<Add library="C:/Users/aurel/Desktop/Programation/allegro-mingw-4.2.2/lib/libaldat.a" />
+					<Add library="C:/Users/aurel/Desktop/Programation/allegro-mingw-4.2.2/lib/liballd.a" />
+					<Add library="C:/Users/aurel/Desktop/Programation/allegro-mingw-4.2.2/lib/liballd_s.a" />
+					<Add library="C:/Users/aurel/Desktop/Programation/allegro-mingw-4.2.2/lib/liballeg.a" />
+					<Add library="C:/Users/aurel/Desktop/Programation/allegro-mingw-4.2.2/lib/liballeg_s.a" />
+					<Add library="C:/Users/aurel/Desktop/Programation/allegro-mingw-4.2.2/lib/liballp.a" />
+					<Add library="C:/Users/aurel/Desktop/Programation/allegro-mingw-4.2.2/lib/liballp_s.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -52,6 +52,8 @@
 		<Unit filename="balle.h" />
 		<Unit filename="brique.cpp" />
 		<Unit filename="brique.h" />
+		<Unit filename="briquenormale.cpp" />
+		<Unit filename="briquenormale.h" />
 		<Unit filename="forme.cpp" />
 		<Unit filename="forme.h" />
 		<Unit filename="main.cpp" />

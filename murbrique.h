@@ -15,6 +15,10 @@ class murBrique : public forme{
         void collision(int, int);
         void ajoutBrique(int,int,int,int);
         void construireMur(int,int);
+        void casseBrique(point);
+        void casseBrique(brique*);
+        void faireCadre();
+        void interaction(point) ;
         //bool selection(int,int){return false;}
 
 };

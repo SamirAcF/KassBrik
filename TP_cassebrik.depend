@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1495451138 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\main.cpp
+1495638515 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\main.cpp
 	<iostream>
 	<allegro.h>
 	"point.h"
@@ -10,28 +10,30 @@
 	"balle.h"
 	<list>
 
-1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\point.h
+1495637676 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\point.h
 
-1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.h
+1495639475 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.h
 	"point.h"
 	"forme.h"
 
-1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\point.cpp
+1495637035 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\point.cpp
 	<allegro.h>
 	<iostream>
 	"point.h"
 
-1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.cpp
+1495639609 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.cpp
 	"rectangle.h"
+	<iostream>
+	<allegro.h>
 
 1495120166 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\forme.h
 
-1495129616 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.cpp
+1495639464 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.cpp
 	"brique.h"
 	<allegro.h>
 	<iostream>
 
-1495126536 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.h
+1495639433 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.h
 	"point.h"
 	"rectangle.h"
 	"forme.h"
@@ -39,11 +41,13 @@
 1495120166 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\forme.cpp
 	"forme.h"
 
-1495447591 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.cpp
+1495638826 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.cpp
 	<list>
 	"murBrique.h"
+	<allegro.h>
+	<iostream>
 
-1495448277 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.h
+1495638528 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.h
 	<list>
 	"brique.h"
 
