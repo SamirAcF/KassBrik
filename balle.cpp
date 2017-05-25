@@ -12,15 +12,52 @@ balle::~balle(){}
 
 
 /*************************************GETTERS AND SETTERS********************************************************/
+    point balle::getPointCentre(){
+        return(tablPoint[0]);
+    }
 
-    int balle::getxCentre(){
-        return(xcentre);
+    point balle::getPointNord(){
+        return(tablPoint[1]);
     }
-    int balle::getyCentre(){
-        return(ycentre);
+
+    point balle::getPointSud(){
+        return(tablPoint[2]);
     }
+
+    point balle::getPointEst(){
+        return(tablPoint[3]);
+    }
+
+    point balle::getPointOuest(){
+        return(tablPoint[4]);
+    }
+
     int balle::getRayon(){
         return(rayon);
+    }
+
+    void balle::setPointCentre(pnt){
+        tablePoint[0] = pnt;
+    }
+
+    void balle::setPointNord(pnt){
+        tablePoint[1] = pnt;
+    }
+
+    void balle::setPointSud(pnt){
+        tablePoint[2] = pnt;
+    }
+
+    void balle::setPointEst(pnt){
+        tablePoint[3] = pnt;
+    }
+
+    void balle::setPointOuest(pnt){
+        tablePoint[4] = pnt;
+    }
+
+    void balle::setRayon(int ray){
+        rayon = ray;
     }
 
 /************************************METHODES GENERALES**********************************************************/
