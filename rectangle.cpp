@@ -8,13 +8,13 @@
 
 extern BITMAP* bmap;
 
-rectangle::rectangle(int x1, int x2, int y1, int y2):p1(x1,y1),p2(x2,y2), m_couleur(0),length(x2-x1),width(y2-y1){}
+rectangle::rectangle(int x1, int x2, int y1, int y2):p1(x1,y1),p2(x2,y2),length(x2-x1),width(y2-y1), m_couleur(0){}
 
-rectangle::rectangle(int x1, int x2, int y1, int y2, int couleur):p1(x1,y1),p2(x2,y2), m_couleur(couleur),length(x2-x1),width(y2-y1){}
+rectangle::rectangle(int x1, int x2, int y1, int y2, int couleur):p1(x1,y1),p2(x2,y2),length(x2-x1),width(y2-y1), m_couleur(couleur){}
 
 //rectangle::rectangle(point* sup_gau, point *inf_dr): p1(*sup_gau), p2(*inf_dr){}
 
-rectangle::rectangle(point sup_gau, point inf_dr): p1(sup_gau), p2(inf_dr), m_couleur(0),length(sup_gau.getx()-inf_dr.getx()),width(sup_gau.gety()-inf_dr.gety()){}
+rectangle::rectangle(point sup_gau, point inf_dr): p1(sup_gau), p2(inf_dr),length(sup_gau.getx()-inf_dr.getx()),width(sup_gau.gety()-inf_dr.gety()), m_couleur(0){}
 
 rectangle::rectangle(point sup_gau):p1(sup_gau),p2(sup_gau){
     p2.deplace(40,20);

@@ -3,7 +3,8 @@
 #include <list>
 #include "brique.h"
 using namespace std;
-//class brique;
+
+
 class murBrique : public forme{
     protected :
         list<brique*> m_listeBriques;

@@ -3,7 +3,7 @@
 #include <iostream>
 #include <allegro.h>
 #include "balle.h"
-
+/*
 balle::balle(int a,int b, int ray, int color): xcentre(a),ycentre(b),rayon(ray),couleur(color){}
 balle::balle(int a,int b, int ray): xcentre(a),ycentre(b),rayon(ray){}
 balle::balle(point point, int ray):xcentre(point.getx()),ycentre(point.gety()),rayon(ray),couleur(makecol(128,128,128)){}
@@ -12,6 +12,7 @@ balle::~balle(){}
 
 
 /*************************************GETTERS AND SETTERS********************************************************/
+  /*
     point balle::getPointCentre(){
         return(tablPoint[0]);
     }
@@ -61,7 +62,7 @@ balle::~balle(){}
     }
 
 /************************************METHODES GENERALES**********************************************************/
-void balle::collision()
+/*void balle::collision()
 {
 
 }
@@ -76,5 +77,5 @@ void balle::deplace(int newX, int newY,int speed){
     xcentre=newX;
     ycentre=newY;
     affiche();
-}
+}*/
 #endif

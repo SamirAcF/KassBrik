@@ -14,13 +14,6 @@
 
     brique::brique():rectangle(), m_compteur(1){}
 
-    brique* brique::genere_brique(int x1,int x2,int y1,int y2,int couleur,int compteur){
-        brique* retour = (brique*)malloc (sizeof(brique));
-        brique retoure = brique(x1, x2, y1, y2, couleur, compteur);
-        retour = &retoure;
-        return (retour);
-    }
-
     brique::~brique(){}
 
 

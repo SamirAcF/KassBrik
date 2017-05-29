@@ -246,7 +246,6 @@ int main()
 
     murBrique test = murBrique(liste_briques);
 
-    brique bite;
     test.faireCadre();
     test.construireMur(7,7);
         int i = 300;
@@ -255,7 +254,6 @@ int main()
         cout<<"i : "<<i<<endl;
         point pa(i,i);
         readkey();
-        test.interaction(pa);
         test.affiche();
         blit(bmap, screen,0,0,0,0,640,480);
         readkey();
@@ -293,5 +291,5 @@ while(!flagQuit){
     }
 */
 
-      destroy_bitmap(bmp);
+      destroy_bitmap(bmap);
 }END_OF_MAIN() ;

@@ -4,7 +4,8 @@
 #include "murBrique.h"
 #include <allegro.h>
 #include <iostream>
-
+#include "briquenormale.h"
+#include "brique.h"
 extern BITMAP* bmap;
 
     murBrique::murBrique(list<brique*> listeBriques):m_listeBriques(listeBriques){}
@@ -16,11 +17,11 @@ extern BITMAP* bmap;
         }
     }
     murBrique::~murBrique(){
-        for(m_it = m_listeBriques.begin(); m_it!=m_listeBriques.end(); m_it++){delete(*m_it);}
+         for(m_it = m_listeBriques.begin(); m_it!=m_listeBriques.end(); m_it++){delete(*m_it);}
     }
 
     void murBrique::ajoutBrique(int i,int j,int col,int resistance){
-        brique* briquette = new brique(i, i+70, j, j+30, col, resistance);
+        briqueNormale* briquette = new briqueNormale(i, i+70, j, j+30, col, resistance);
         m_listeBriques.push_front(briquette);
     }
 
@@ -52,13 +53,13 @@ extern BITMAP* bmap;
     void murBrique::interaction(point p){
         for(m_it = m_listeBriques.begin(); m_it!=m_listeBriques.end(); m_it++){
             if((*m_it)->dans_rect(p)){
-                m_listeBriques(*m_it).action;
+                (*m_it)->action();
                 return;
             }
         }
     }
 
-    void murBrique::casseBrique(brique* b){
+    /*void murBrique::casseBrique(brique* b){    //neccessite une surcharge de l'op ==
        for(m_it = m_listeBriques.begin(); m_it!=m_listeBriques.end(); m_it++){
             if((*m_it) == *b){
                 m_listeBriques.remove(*m_it);
@@ -66,16 +67,16 @@ extern BITMAP* bmap;
             }
         }
     }
-
+*/
 
     void murBrique::faireCadre(){
-        brique* briquette = new brique(0, 10, 0, 480, makecol(130,130,130), -1);
+        briqueNormale* briquette = new briqueNormale(0, 10, 0, 480, makecol(130,130,130), -1);
         m_listeBriques.push_front(briquette);
-        briquette = new brique(0, 640, 0, 10, makecol(130,130,130), -1);
+        briquette = new briqueNormale(0, 640, 0, 10, makecol(130,130,130), -1);
         m_listeBriques.push_front(briquette);
-        briquette = new brique(630, 640, 0, 480, makecol(130,130,130), -1);
+        briquette = new briqueNormale(630, 640, 0, 480, makecol(130,130,130), -1);
         m_listeBriques.push_front(briquette);
-        briquette = new brique(0, 640, 470, 480, makecol(130,130,130), -1);
+        briquette = new briqueNormale(0, 640, 470, 480, makecol(130,130,130), -1);
         m_listeBriques.push_front(briquette);
 
     }
