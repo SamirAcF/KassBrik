@@ -7,8 +7,9 @@
 #include "raquette.h"
 #include "balle.h"
 #include <list>
-
-
+#include <chrono>
+#include <thread>
+#include <winalleg.h>
 BITMAP* bmap;
 
 using namespace std;
@@ -233,6 +234,7 @@ int main()
     set_keyboard_rate(10,20);
     bmap = create_bitmap(640,480);
 
+
 /**********************************************TEST MUR DE BRIQUE*********************************************/
 
 
@@ -248,9 +250,7 @@ int main()
 
     test.faireCadre();
     test.construireMur(7,7);
-        int i = 300;
-        test.affiche();
-        while(i >0){
+        /*while(i >0){
         cout<<"i : "<<i<<endl;
         point pa(i,i);
         readkey();
@@ -258,38 +258,42 @@ int main()
         blit(bmap, screen,0,0,0,0,640,480);
         readkey();
         --i;
-        }
-/*****************************************************TEST RAQUETTE****************************************************/
-/*
-    raquetteColor = makecol(234,124,12);
-    point a(10,10);
-    point b(70,30);
-    raquette raquette(a,b,raquetteColor);
-    raquette.affiche();
-while(!flagQuit){
-    e = readkey();
-    if(e==15131){
-        flagQuit = 1;
-        exit(EXIT_SUCCESS);
-    }
-    else{
-        raquette.deplace(e,5);
-    }
-}
-/*****************************************************TESTS BALLE********************************************************/
-/*
-        point b(mouse_x,mouse_y);
-        balle ball(SCREEN_H/2,SCREEN_W/2,SCREEN_H/20);
-        while(1){
-        ball.deplace(mouse_x,mouse_y,1);
-        test.affiche();
-        }
-    e = readkey();
-    if(e==15131){
-        flagQuit = 1;
-        exit(EXIT_SUCCESS);
-    }
-*/
+        */
 
-      destroy_bitmap(bmap);
+/*****************************************************TEST RAQUETTE****************************************************/
+
+    raquetteColor = makecol(234,124,12);
+    raquette notreRaquette = raquette();
+    point a(SCREEN_W/2-35,SCREEN_H-40);
+    point c(SCREEN_W/2+35,SCREEN_H-20);
+    notreRaquette.setP1(a);
+    notreRaquette.setP2(c);
+    notreRaquette.setColor(makecol(127,125,255));
+
+/*****************************************************TESTS BALLE********************************************************/
+
+    point b(mouse_x,mouse_y);
+    balle ball(b,SCREEN_H/20,makecol(12,123,123));
+    e = readkey();
+    if(e==15131){
+        flagQuit = 1;
+        exit(EXIT_SUCCESS);
+    }
+
+
+        int i=10;
+        int j=10;
+    while(!key[KEY_ESC]){
+        i++;
+        j++;
+        clear_bitmap(bmap);
+        flagQuit = 1;
+        notreRaquette.deplace(6);
+        test.affiche();
+        ball.deplace(i,j,1);
+        blit(bmap, screen,0,0,0,0,640,480);
+        Sleep(1);
+    }
+    exit(EXIT_SUCCESS);
+    destroy_bitmap(bmap);
 }END_OF_MAIN() ;

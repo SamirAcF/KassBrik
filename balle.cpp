@@ -3,16 +3,22 @@
 #include <iostream>
 #include <allegro.h>
 #include "balle.h"
-/*
-balle::balle(int a,int b, int ray, int color): xcentre(a),ycentre(b),rayon(ray),couleur(color){}
-balle::balle(int a,int b, int ray): xcentre(a),ycentre(b),rayon(ray){}
-balle::balle(point point, int ray):xcentre(point.getx()),ycentre(point.gety()),rayon(ray),couleur(makecol(128,128,128)){}
-balle::balle(point point, int ray, int color):xcentre(point.getx()),ycentre(point.gety()),rayon(ray),couleur(color){}
+extern BITMAP* bmap;
+
+balle::balle(point point, int ray){
+    tablPoint[0] = point;
+    rayon= ray;
+    couleur = makecol(128,128,128);
+    }
+balle::balle(point point, int ray, int color){
+    tablPoint[0] = point;
+    rayon = ray;
+    couleur= color;
+    }
 balle::~balle(){}
 
 
 /*************************************GETTERS AND SETTERS********************************************************/
-  /*
     point balle::getPointCentre(){
         return(tablPoint[0]);
     }
@@ -37,24 +43,24 @@ balle::~balle(){}
         return(rayon);
     }
 
-    void balle::setPointCentre(pnt){
-        tablePoint[0] = pnt;
+    void balle::setPointCentre(point pnt){
+        tablPoint[0] = pnt;
     }
 
-    void balle::setPointNord(pnt){
-        tablePoint[1] = pnt;
+    void balle::setPointNord(point pnt){
+        tablPoint[1] = pnt;
     }
 
-    void balle::setPointSud(pnt){
-        tablePoint[2] = pnt;
+    void balle::setPointSud(point pnt){
+        tablPoint[2] = pnt;
     }
 
-    void balle::setPointEst(pnt){
-        tablePoint[3] = pnt;
+    void balle::setPointEst(point pnt){
+        tablPoint[3] = pnt;
     }
 
-    void balle::setPointOuest(pnt){
-        tablePoint[4] = pnt;
+    void balle::setPointOuest(point pnt){
+        tablPoint[4] = pnt;
     }
 
     void balle::setRayon(int ray){
@@ -62,20 +68,20 @@ balle::~balle(){}
     }
 
 /************************************METHODES GENERALES**********************************************************/
-/*void balle::collision()
+void balle::collision()
 {
 
 }
 void balle::affiche(){
-    circlefill(screen,xcentre,ycentre,rayon,makecol(109,190,91));
+    circlefill(bmap,tablPoint[0].getx(),tablPoint[0].gety(),rayon,makecol(109,190,91));
 }
 void balle::efface(){
-    circlefill(screen,xcentre,ycentre,rayon,makecol(0,0,0));
+    circlefill(bmap,tablPoint[0].getx(),tablPoint[0].gety(),rayon,makecol(0,0,0));
 }
 void balle::deplace(int newX, int newY,int speed){
-    efface();
-    xcentre=newX;
-    ycentre=newY;
+    //efface();
+    tablPoint[0].setx(newX);
+    tablPoint[0].sety(newY);
     affiche();
-}*/
+}
 #endif

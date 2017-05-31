@@ -69,6 +69,13 @@ void rectangle::setColor(int color){
     m_couleur = color;
 }
 
+void rectangle::setP1(point pnt){
+    p1=pnt;
+}
+
+void rectangle::setP2(point pnt){
+    p2=pnt;
+}
 #endif
 
 

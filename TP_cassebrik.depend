@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1496051353 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\main.cpp
+1496239703 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\main.cpp
 	<iostream>
 	<allegro.h>
 	"point.h"
@@ -9,10 +9,12 @@
 	"raquette.h"
 	"balle.h"
 	<list>
+	<chrono>
+	<thread>
 
 1495637676 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\point.h
 
-1495639475 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.h
+1496055652 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.h
 	"point.h"
 	"forme.h"
 
@@ -21,19 +23,19 @@
 	<iostream>
 	"point.h"
 
-1496050716 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.cpp
+1496055053 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.cpp
 	"rectangle.h"
 	<iostream>
 	<allegro.h>
 
 1495120166 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\forme.h
 
-1496051338 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.cpp
+1496053126 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.cpp
 	"brique.h"
 	<allegro.h>
 	<iostream>
 
-1496051338 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.h
+1496053126 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.h
 	"point.h"
 	"rectangle.h"
 	"forme.h"
@@ -41,7 +43,7 @@
 1495120166 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\forme.cpp
 	"forme.h"
 
-1496050346 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.cpp
+1496059991 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.cpp
 	<list>
 	"murBrique.h"
 	<allegro.h>
@@ -49,7 +51,7 @@
 	"briquenormale.h"
 	"brique.h"
 
-1496050376 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.h
+1496053126 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.h
 	<list>
 	"brique.h"
 
@@ -244,29 +246,29 @@
 	<list>
 	"murBrique.h"
 
-1495922271 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\balle.cpp
+1496056049 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\balle.cpp
 	<iostream>
 	<allegro.h>
 	"balle.h"
 
-1495703530 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\balle.h
+1496052781 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\balle.h
 	"forme.h"
 	"point.h"
 
-1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\raquette.h
+1496238494 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\raquette.h
 	"point.h"
 	"rectangle.h"
 	"forme.h"
 
-1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\raquette.cpp
+1496238494 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\raquette.cpp
 	"raquette.h"
 	<allegro.h>
 	<iostream>
 
-1496051336 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\briquenormale.cpp
+1496053126 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\briquenormale.cpp
 	"briquenormale.h"
 	"murbrique.h"
 
-1496051331 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\briquenormale.h
+1496053126 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\briquenormale.h
 	"brique.h"
 

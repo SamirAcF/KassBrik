@@ -8,7 +8,6 @@ using namespace std;
 //Classe Raquette
 class raquette : public rectangle{
 protected :
-    int m_longueur;
 public :
     raquette(); //création par défaut
     raquette(point, point); //création via deux points
@@ -17,9 +16,7 @@ public :
     raquette(int,int,int,int); //création à partir de quatre valeurs
     raquette(int,int,int,int,int); //création à partir de quatre valeurs et une couleur
     virtual void affiche();
-    void deplace(int,int); //déplacement en rentrant le nouveau centre de la raquette ( pour suivre la souris )
-    void deplace(int); //déplacement en translation simple sur l'axe X
-    void efface(); //efface une brique de l'écran
+    void deplace(int); //déplacement de la raquette a la vitesse donnée
     bool verifx(int,int); //verifie si x est dans une position extreme ou pas
     ~raquette();
 };

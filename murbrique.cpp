@@ -11,7 +11,6 @@ extern BITMAP* bmap;
     murBrique::murBrique(list<brique*> listeBriques):m_listeBriques(listeBriques){}
 
     void murBrique::affiche(){
-        clear_bitmap(bmap);
         for(m_it = m_listeBriques.begin(); m_it!=m_listeBriques.end(); m_it++){
             (*m_it)->affiche();
         }
@@ -26,17 +25,17 @@ extern BITMAP* bmap;
     }
 
     void murBrique::construireMur(int lignes, int colonnes){
-    int flag = 0;
-    for (int i = 0; i < lignes ; i++){
-        for(int j = 0; j < colonnes; j++){
-            if(flag){
-                ajoutBrique(i*71,j*31,makecol(40,255,100),1);
-                flag = 0;
-            }
-            else{
-                ajoutBrique(i*71,j*31   ,makecol(255,100,40),1);
-                flag = 1;
-            }
+        int flag = 0;
+        for (int i = 0; i < lignes ; i++){
+            for(int j = 0; j < colonnes; j++){
+                if(flag){
+                    ajoutBrique(i*70+12,j*30+12,makecol(148,0,211),1);
+                    flag = 0;
+                }
+                else{
+                    ajoutBrique(i*70+12,j*30+12,makecol(64,224,208),1);
+                    flag = 1;
+                }
             }
         }
     }
@@ -77,6 +76,8 @@ extern BITMAP* bmap;
         briquette = new briqueNormale(630, 640, 0, 480, makecol(130,130,130), -1);
         m_listeBriques.push_front(briquette);
         briquette = new briqueNormale(0, 640, 470, 480, makecol(130,130,130), -1);
+        m_listeBriques.push_front(briquette);
+        briquette = new briqueNormale(504, 514, 0, 480, makecol(130,130,130), -1);
         m_listeBriques.push_front(briquette);
 
     }

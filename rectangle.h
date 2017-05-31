@@ -22,6 +22,8 @@ class rectangle : public forme
     void affiche();
     point getP1();
     point getP2();
+    void setP1(point);
+    void setP2(point);
     int getLength();
     void setColor(int);
     bool dans_rect(int, int);
