@@ -4,16 +4,17 @@
 class point
 {
 private :
-    int x, y;
+    float x, y;
 public:
-    point(int x = 0,int y = 0);//constructeur
+    point();
+    point(float x,float y);//constructeur
     ~point();
-    int getx() const; //accesseurs
-    int gety() const;
-    void setx(int,int); // CHANGEMENT DE X PRENANT EN COMPTE LE DEPLACEMENT A VENIR
-    void setx(int);
-    void sety(int);
-    void deplace(int,int);
+    float getx() const; //accesseurs
+    float gety() const;
+    void setx(float);
+    void sety(float);
+    point operator=(point);
+    void deplace(float,float);
 };
 
 #endif

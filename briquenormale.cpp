@@ -1,8 +1,9 @@
 #include "briquenormale.h"
 #include "murbrique.h"
 
-void briqueNormale::action(){
+int briqueNormale::action(){
     m_compteur--;
+    return(m_compteur);
 }
 
 briqueNormale* briqueNormale::genere_brique(int x1,int x2,int y1,int y2,int couleur,int compteur){

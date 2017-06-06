@@ -217,6 +217,7 @@ class menu2{
 
 int main()
 {
+    srand((unsigned) time(NULL));
     int e,raquetteColor;
     int flagQuit = 0;
     allegro_init();
@@ -231,7 +232,7 @@ int main()
 
     set_mouse_sprite(NULL);
     show_mouse(screen);
-    set_keyboard_rate(10,20);
+    set_keyboard_rate(10,2);
     bmap = create_bitmap(640,480);
 
 
@@ -246,15 +247,15 @@ int main()
     brique * p_brique;
 
 
-    murBrique test = murBrique(liste_briques);
+    murBrique mur = murBrique(liste_briques);
 
-    test.faireCadre();
-    test.construireMur(7,7);
+    mur.faireCadre();
+    mur.construireMur(7,7);
         /*while(i >0){
         cout<<"i : "<<i<<endl;
         point pa(i,i);
         readkey();
-        test.affiche();
+        mur.affiche();
         blit(bmap, screen,0,0,0,0,640,480);
         readkey();
         --i;
@@ -263,36 +264,34 @@ int main()
 /*****************************************************TEST RAQUETTE****************************************************/
 
     raquetteColor = makecol(234,124,12);
-    raquette notreRaquette = raquette();
+    raquette pad = raquette();
     point a(SCREEN_W/2-35,SCREEN_H-40);
     point c(SCREEN_W/2+35,SCREEN_H-20);
-    notreRaquette.setP1(a);
-    notreRaquette.setP2(c);
-    notreRaquette.setColor(makecol(127,125,255));
+    pad.setP1(a);
+    pad.setP2(c);
+    pad.setColor(makecol(127,125,255));
 
 /*****************************************************TESTS BALLE********************************************************/
+    point b = point(SCREEN_W/2,pad.getP1().gety() - SCREEN_H/40);
+    balle ball(b,SCREEN_H/40,makecol(12,123,123));
 
-    point b(mouse_x,mouse_y);
-    balle ball(b,SCREEN_H/20,makecol(12,123,123));
     e = readkey();
     if(e==15131){
         flagQuit = 1;
         exit(EXIT_SUCCESS);
     }
-
-
-        int i=10;
-        int j=10;
+    cout << "RAYON : "<<ball.getRayon()<<endl;
     while(!key[KEY_ESC]){
-        i++;
-        j++;
         clear_bitmap(bmap);
         flagQuit = 1;
-        notreRaquette.deplace(6);
-        test.affiche();
-        ball.deplace(i,j,1);
+        pad.deplace(1);
+        mur.affiche();
+        ball.collision(&mur);
+        ball.collision(pad);
+        cout<< " x ;  y : " << ball.getPointCentre().getx()<< " ; " << ball.getPointCentre().gety() << endl;
+        //ball.collision();
+        ball.deplace(1);
         blit(bmap, screen,0,0,0,0,640,480);
-        Sleep(1);
     }
     exit(EXIT_SUCCESS);
     destroy_bitmap(bmap);

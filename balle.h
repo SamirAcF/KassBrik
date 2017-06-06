@@ -2,11 +2,11 @@
 #define BALLE_H
 #include "forme.h"
 #include "point.h"
-
+#include "murbrique.h"
 class balle : public forme{
     point tablPoint[5];
     int rayon;
-    int angle;
+    double angle;
     int couleur;
     bool sticky;
 public:
@@ -29,10 +29,17 @@ public:
     void setPointOuest(point);
     void setRayon(int);
 /*******************************************AUTRES METHODES***********************************************/
+    void collision(murBrique*);
+    void collision(raquette);
     void collision();
     void affiche();
     void efface();
-    void deplace(int, int, int);
+    void majPoints();
+    void deplace(int);
+    void bounceNord();
+    void bounceSud();
+    void bounceOuest();
+    void bounceEst();
 /**********************************************DESTRUCTEUR*********************************************/
     ~balle();
 };

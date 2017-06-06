@@ -5,7 +5,7 @@
 class briqueNormale : public brique{
     protected :
     public :
-    void action();
+    int action();
 
     briqueNormale* genere_brique(int,int,int,int,int,int);
     briqueNormale(int,int,int,int,int,int);

@@ -81,13 +81,27 @@ extern BITMAP* bmap;
         m_listeBriques.push_front(briquette);
 
     }
-    /*void murBrique::collision(int sx, int sy){
-        bool res;
+
+    list<brique*> murBrique::getList(){
+        return(m_listeBriques);
+    }
+
+    list<brique*>::iterator murBrique::getIt(){
+        return(m_it);
+    }
+
+    brique* murBrique::collision(int sx, int sy){
         for(m_it = m_listeBriques.begin(); m_it!=m_listeBriques.end(); m_it++){
-            if((*m_it)->selection(sx,sy))
-                if((*m_it)->action()){ m_listeBriques.remove(*m_it); return;}
+            if((*m_it)->dans_rect(sx,sy)){
+                if(!(*m_it)->action()){
+                    m_listeBriques.remove(*m_it);
+                    return(*m_it);
+                }
+                return(*m_it);
+            }
         }
-    }*/
+        return(NULL);
+    }
 
 
 #endif

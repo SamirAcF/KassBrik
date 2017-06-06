@@ -41,13 +41,10 @@ bool rectangle::dans_rect(int pos_x, int pos_y){
 }
 
 bool rectangle::dans_rect(point p){
-    int i = 1;
-    if(p.getx() < p1.getx() || p.getx() > p2.getx()){
-        --i;
-    }
-    if(i){
-        if(p.gety() < p1.gety() || p.gety() > p2.gety()){
-            --i;
+    bool i = false;
+    if(p.getx() >= p1.getx() || p.getx() <= p2.getx()){
+        if(p.gety() >= p1.gety() || p.gety() <= p2.gety()){
+            i= true;
         }
     }
     return(i);
