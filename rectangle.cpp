@@ -12,7 +12,7 @@ rectangle::rectangle(int x1, int x2, int y1, int y2):p1(x1,y1),p2(x2,y2),length(
 
 rectangle::rectangle(int x1, int x2, int y1, int y2, int couleur):p1(x1,y1),p2(x2,y2),length(x2-x1),width(y2-y1), m_couleur(couleur){}
 
-rectangle::rectangle(point sup_gau, point inf_dr): p1(sup_gau), p2(inf_dr),length(sup_gau.getx()-inf_dr.getx()),width(sup_gau.gety()-inf_dr.gety()), m_couleur(0){}
+rectangle::rectangle(point sup_gau, point inf_dr): p1(sup_gau), p2(inf_dr),length(sup_gau.getx()-inf_dr.getx()),width(sup_gau.gety()-inf_dr.gety()), m_couleur(makecol(128,128,128)){}
 
 rectangle::rectangle(point sup_gau, point inf_dr, int couleur): p1(sup_gau), p2(inf_dr),length(sup_gau.getx()-inf_dr.getx()),width(sup_gau.gety()-inf_dr.gety()), m_couleur(couleur){}
 

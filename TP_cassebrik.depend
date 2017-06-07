@@ -378,3 +378,103 @@
 	<iostream>
 	<string>
 
+1496831196 source:\\merlin\etudiants\alicherifs\documents\kassbrik\balle.cpp
+	<iostream>
+	<allegro.h>
+	<math.h>
+	"balle.h"
+	<ctime>
+	"point.h"
+
+1496831196 \\merlin\etudiants\alicherifs\documents\kassbrik\balle.h
+	"forme.h"
+	"point.h"
+	"murbrique.h"
+
+1496831175 \\merlin\etudiants\alicherifs\documents\kassbrik\forme.h
+
+1496831198 \\merlin\etudiants\alicherifs\documents\kassbrik\point.h
+
+1496831197 \\merlin\etudiants\alicherifs\documents\kassbrik\murbrique.h
+	<list>
+	"brique.h"
+	"raquette.h"
+	"briquenormale.h"
+
+1496831197 \\merlin\etudiants\alicherifs\documents\kassbrik\brique.h
+	"point.h"
+	"rectangle.h"
+	"forme.h"
+
+1496836266 \\merlin\etudiants\alicherifs\documents\kassbrik\rectangle.h
+	"point.h"
+	"forme.h"
+
+1496831198 \\merlin\etudiants\alicherifs\documents\kassbrik\raquette.h
+	"point.h"
+	"rectangle.h"
+	"forme.h"
+
+1496831197 \\merlin\etudiants\alicherifs\documents\kassbrik\briquenormale.h
+	"brique.h"
+
+1496831197 source:\\merlin\etudiants\alicherifs\documents\kassbrik\brique.cpp
+	"brique.h"
+	<allegro.h>
+	<iostream>
+
+1496831175 source:\\merlin\etudiants\alicherifs\documents\kassbrik\forme.cpp
+	"forme.h"
+
+1496844576 source:\\merlin\etudiants\alicherifs\documents\kassbrik\main.cpp
+	<iostream>
+	<allegro.h>
+	"point.h"
+	"rectangle.h"
+	"brique.h"
+	"murbrique.h"
+	"raquette.h"
+	"balle.h"
+	"bouton.h"
+	<list>
+	<chrono>
+	<thread>
+
+1496844261 \\merlin\etudiants\alicherifs\documents\kassbrik\bouton.h
+	"rectangle.h"
+	"point.h"
+	<iostream>
+	<string>
+
+1496831197 source:\\merlin\etudiants\alicherifs\documents\kassbrik\murbrique.cpp
+	<list>
+	"murBrique.h"
+	<allegro.h>
+	<iostream>
+	"briquenormale.h"
+	"brique.h"
+
+1496831198 source:\\merlin\etudiants\alicherifs\documents\kassbrik\point.cpp
+	<allegro.h>
+	<iostream>
+	"point.h"
+
+1496831198 source:\\merlin\etudiants\alicherifs\documents\kassbrik\raquette.cpp
+	"raquette.h"
+	<allegro.h>
+	<iostream>
+
+1496844698 source:\\merlin\etudiants\alicherifs\documents\kassbrik\rectangle.cpp
+	"rectangle.h"
+	<iostream>
+	<allegro.h>
+
+1496831197 source:\\merlin\etudiants\alicherifs\documents\kassbrik\briquenormale.cpp
+	"briquenormale.h"
+	"murbrique.h"
+
+1496844991 source:\\merlin\etudiants\alicherifs\documents\kassbrik\bouton.cpp
+	"Bouton.h"
+	<allegro.h>
+	<iostream>
+

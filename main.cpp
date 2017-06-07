@@ -97,12 +97,14 @@ int main()
 */
 /*******************************************************TEST BOUTONS**********************************************************/
 
-destroy_bitmap(bmap);
-point p1 = point(100,100);
-point p2 = point(300,200);
-rectangle newGame(p1,p2);
+point p1(100,100);
+point p2(300,200);
+char* text = "salut";
+Bouton newGame(p1,p2,makecol(125,122,122), text);
+//rectfill(bmap, p1.getx(), p1.gety(), p2.getx(), p2.gety(), makecol(125,122,122));
+cout<<"text :"<<newGame.getTxt()<<endl<<"x puis y :"<<endl<<newGame.getP1().getx()<<endl<<newGame.getP2().gety()<<endl;
 newGame.affiche();
-blit(bmap, screen,0,0,0,0,640,480);
+blit(bmap,screen,0,0,0,0,640,480);
 readkey();
 exit(EXIT_SUCCESS);
 }END_OF_MAIN() ;

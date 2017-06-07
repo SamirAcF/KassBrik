@@ -20,9 +20,9 @@ class Bouton : public rectangle{
 
         void affiche();
         void ecrire();
+        void setTxt(char* val) { txt = val; }
 
-        void Setxt(char* val) { txt = val; }
-        char* GetTxt() { return txt; }
+        char* getTxt() { return txt; }
 };
 
 #endif // BOUTON_H
