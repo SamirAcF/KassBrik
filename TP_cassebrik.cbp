@@ -16,13 +16,13 @@
 					<Add directory="include" />
 				</Compiler>
 				<Linker>
-					<Add library="C:\Users\aurel\Desktop\Programation\allegro-mingw-4.2.2\lib\libaldat.a" />
-					<Add library="C:\Users\aurel\Desktop\Programation\allegro-mingw-4.2.2\lib\liballd.a" />
-					<Add library="C:\Users\aurel\Desktop\Programation\allegro-mingw-4.2.2\lib\liballd_s.a" />
-					<Add library="C:\Users\aurel\Desktop\Programation\allegro-mingw-4.2.2\lib\liballeg.a" />
-					<Add library="C:\Users\aurel\Desktop\Programation\allegro-mingw-4.2.2\lib\liballeg_s.a" />
-					<Add library="C:\Users\aurel\Desktop\Programation\allegro-mingw-4.2.2\lib\liballp.a" />
-					<Add library="C:\Users\aurel\Desktop\Programation\allegro-mingw-4.2.2\lib\liballp_s.a" />
+					<Add library="..\..\Downloads\allegro-mingw-4.2.2\allegro-mingw-4.2.2\lib\libaldat.a" />
+					<Add library="..\..\Downloads\allegro-mingw-4.2.2\allegro-mingw-4.2.2\lib\liballd.a" />
+					<Add library="..\..\Downloads\allegro-mingw-4.2.2\allegro-mingw-4.2.2\lib\liballd_s.a" />
+					<Add library="..\..\Downloads\allegro-mingw-4.2.2\allegro-mingw-4.2.2\lib\liballeg.a" />
+					<Add library="..\..\Downloads\allegro-mingw-4.2.2\allegro-mingw-4.2.2\lib\liballeg_s.a" />
+					<Add library="..\..\Downloads\allegro-mingw-4.2.2\allegro-mingw-4.2.2\lib\liballp.a" />
+					<Add library="..\..\Downloads\allegro-mingw-4.2.2\allegro-mingw-4.2.2\lib\liballp_s.a" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -50,6 +50,8 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="Bouton.cpp" />
+		<Unit filename="Bouton.h" />
 		<Unit filename="balle.cpp" />
 		<Unit filename="balle.h" />
 		<Unit filename="brique.cpp" />
@@ -58,7 +60,6 @@
 		<Unit filename="briquenormale.h" />
 		<Unit filename="forme.cpp" />
 		<Unit filename="forme.h" />
-		<Unit filename="include/Bouton.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="murbrique.cpp" />
 		<Unit filename="murbrique.h" />
@@ -68,7 +69,6 @@
 		<Unit filename="raquette.h" />
 		<Unit filename="rectangle.cpp" />
 		<Unit filename="rectangle.h" />
-		<Unit filename="src/Bouton.cpp" />
 		<Extensions>
 			<debugger />
 			<code_completion />
