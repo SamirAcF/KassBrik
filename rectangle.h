@@ -13,7 +13,6 @@ class rectangle : public forme
     public:
     rectangle(int x1 = 0,int x2 = 0,int y1 = 0,int y2 = 0);
     rectangle(int, int, int, int, int);
-    //rectangle(&point,&point);
     rectangle(point, point);
     rectangle(point, point, int);
     rectangle(point);
@@ -22,6 +21,8 @@ class rectangle : public forme
     void affiche();
     point getP1();
     point getP2();
+    void setP1(point);
+    void setP2(point);
     int getLength();
     void setColor(int);
     bool dans_rect(int, int);

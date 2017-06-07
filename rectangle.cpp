@@ -1,14 +1,21 @@
 #ifndef RECTANGLE_C
 #define RECTANGLE_C
 #include "rectangle.h"
+#include <iostream>
 
-rectangle::rectangle(int x1, int x2, int y1, int y2):p1(x1,y1),p2(x2,y2), m_couleur(0),length(x2-x1),width(y2-y1){}
+#include <allegro.h>
 
-rectangle::rectangle(int x1, int x2, int y1, int y2, int couleur):p1(x1,y1),p2(x2,y2), m_couleur(couleur),length(x2-x1),width(y2-y1){}
 
-//rectangle::rectangle(point* sup_gau, point *inf_dr): p1(*sup_gau), p2(*inf_dr){}
+extern BITMAP* bmap;
 
-rectangle::rectangle(point sup_gau, point inf_dr): p1(sup_gau), p2(inf_dr), m_couleur(0),length(sup_gau.getx()-inf_dr.getx()),width(sup_gau.gety()-inf_dr.gety()){}
+rectangle::rectangle(int x1, int x2, int y1, int y2):p1(x1,y1),p2(x2,y2),length(x2-x1),width(y2-y1), m_couleur(0){}
+
+rectangle::rectangle(int x1, int x2, int y1, int y2, int couleur):p1(x1,y1),p2(x2,y2),length(x2-x1),width(y2-y1), m_couleur(couleur){}
+
+rectangle::rectangle(point sup_gau, point inf_dr): p1(sup_gau), p2(inf_dr),length(sup_gau.getx()-inf_dr.getx()),width(sup_gau.gety()-inf_dr.gety()), m_couleur(0){}
+
+rectangle::rectangle(point sup_gau, point inf_dr, int couleur): p1(sup_gau), p2(inf_dr),length(sup_gau.getx()-inf_dr.getx()),width(sup_gau.gety()-inf_dr.gety()), m_couleur(couleur){}
+
 
 rectangle::rectangle(point sup_gau):p1(sup_gau),p2(sup_gau){
     p2.deplace(40,20);
@@ -16,7 +23,9 @@ rectangle::rectangle(point sup_gau):p1(sup_gau),p2(sup_gau){
     length = 20;
 }
 
-rectangle::rectangle(point sup_gau, point inf_dr, int couleur): p1(sup_gau), p2(inf_dr), m_couleur(couleur){}
+void rectangle::affiche(){
+        rectfill(bmap, getP1().getx(), getP1().gety(), getP2().getx(), getP2().gety(), m_couleur);
+    }
 
 
 rectangle::~rectangle(){}
@@ -31,7 +40,13 @@ bool rectangle::dans_rect(int pos_x, int pos_y){
 }
 
 bool rectangle::dans_rect(point p){
-    return(p.getx() >= p1.getx() && p.getx() <= p2.getx() && p.gety() >= p1.gety() && p.gety() <= p2.gety());
+    bool i = false;
+    if(p.getx() >= p1.getx() || p.getx() <= p2.getx()){
+        if(p.gety() >= p1.gety() || p.gety() <= p2.gety()){
+            i= true;
+        }
+    }
+    return(i);
 }
 
 point rectangle::getP1(){
@@ -50,10 +65,13 @@ void rectangle::setColor(int color){
     m_couleur = color;
 }
 
-void rectangle::affiche(){
-    //rien faire
+void rectangle::setP1(point pnt){
+    p1=pnt;
 }
 
+void rectangle::setP2(point pnt){
+    p2=pnt;
+}
 #endif
 
 

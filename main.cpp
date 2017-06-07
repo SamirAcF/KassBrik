@@ -6,216 +6,17 @@
 #include "murbrique.h"
 #include "raquette.h"
 #include "balle.h"
+#include "bouton.h"
 #include <list>
-#define KEY_UP 72
-#define KEY_DOWN 80
-#define KEY_LEFT 75
-#define KEY_RIGHT 77
+#include <chrono>
+#include <thread>
+BITMAP* bmap;
 
 using namespace std;
-/* bouton, menu, brique 1, mini exemple
-
-class bouton : public forme{
-    protected :
-    public :
-    //...
-    void affiche();
-};
-
-class menu : public forme{
-    protected :
-    public :
-    //...
-    void affiche();
-};
-
-class brique1:public brique{
-    protected :
-    public:
-    brique1(int,int);
-    ~brique1(){}
-    bool action();
-
-    brique1::brique1(int px, int py):brique(px,py){
-        couleur = makecol(100,100,100);
-        compteur = 3; // 3 coups pour détruire la brique
-    }
-    bool brique1::action(){
-        couleur = couleur--; //par exempl
-        if(--compeur == 0){
-            return(true);
-        }
-        return(false);
-
-    }
-};
-
-/* UTILISATION :
-    rectangle *r1 = new rectangle (1,1,40,30);
-    rectangle *r2 = new rectangle (100,100,50,30);
-    bouton *b1 = neww bouton(*r1, "bouton1");
-    ...
-
-
-    ttab[0] = r1;
-    ttab[1] = r2;
-    ttab[2] = b1;
-
-    for(int i = à; i<4;i++)
-    ttab[i]->affiche();
-    */
-/* menu2, du code sur les classes
-vector <forme*> v;
-v.push_back(r1);
-v.push_back(r2);
-v.push_back(b1);
-v.push_back(b2);
-for(int i=0; i<v.size();i++){v[i]->affiche();}
-//suppression du dernier objet inséré et afichage :
-v.pop_back();
-for(int i = 0; i<v.size(); i++){
-    v[i]->affiche();
-}
-//insertion générique par lot :
-vector <forme*> v;
-int drap = 1;
-for (int i = 0;i<10;i++){
-    if (drap){
-        v.push_back(new rectangle(1,1,2,2));
-        drap = 0;
-    }
-    else{
-        v.push_back(new bouton(2,2,3,3,"bouton"));
-        drap = 1;
-    }
-}
-for(i = 0; i<10;i++){v[i]->affiche();}
-
-class bouton{
-protected:
-rect r;
-string ch;
-public :
-    bouton(int,int,int,int,char*);
-    bouton(point,point,char*);
-    bouton(point,string);
-    bouton(rect,string);
-    ~bouton();
-    bouton::bouton():r(0,0,0,0),ch(){} //constructeur par défaut
-    void affiche();
-    bouton::bouton(int x1, int y1, int x2, int y2, char* pch):
-        r(x1, y1, x2, y2),
-        ch(pch)
-    {}
-    bouton::bouton(point pp1, point pp2, char* pch):
-        r(pp1, pp2),
-        ch(pch)
-    {}
-    bouton::bouton(rect pr, string ps):
-    r(pr),
-    ch(pch){}
-
-void bouton::affiche(){
-r.affiche();
-cout<<"chaine = "<<ch<<endl;
-}
-void bouton::init(float px1, float py2, float px2, float py2, char *pch){
-r.init(px1,py1,px2,py2,pch);
-
-}
-}
-
-class menu{
-    protected:
-        bouton *tab;
-        int nb;
-    public:
-    menu(char** int)
-    ~menu()
-    menu(const menu&);
-
-    menu::~menu(){
-        delete []tab;
-    }
-    menu::menu(const menu& src){
-        nb = src.nb
-        tab = new bouton[nb];
-        for (int i = 0; i<nb;i++){
-            tab[i].init(src.tab[i]); //il manque une fonction init qui joue le meme role que le constructeur de recopie.
-            //ou tab[i].init(bouton tmp(tab[i]);
-        }
-    }
-    menu::menu(const menu& src){
-        nb = src.nb;
-        tab = new bouton[nb];
-        for (int i =0; i<nb;i++){
-            tab[i] = src.tab[i];
-        }
-    }
-    void menu::affiche(){
-        for (int i = 0; i <nb;i++){
-            tab[i].affiche(); //appel a la fonction affiche des boutons.
-        }
-    }
-    menu& menu::operator=(const menu& src){
-        if(this != &src){
-        //ecrire code du destructeur
-            delete []tab;
-        //ecrire code du constructeur
-        }
-        return *this;
-    }
-
-}
-
-//meilleur menu :
-
-class menu2{
-    protected:
-        bouton **tab;
-        int nb;
-    public:
-    menu2::menu2(char* t[], int pnb){
-        tab = new bouton*[nb=pnb];
-        for(int i =0; i <nb;i++){
-            tab[i] = new bouton(i,2*i,i,2*i, t[i]);
-        }
-    }
-    menu2::~menu2(){
-        for(in i = 0; i<nb;i++){
-            delete(tab[i]);
-        }
-        delete tab;
-    }
-    menu2::menu2(const menu2& src){
-        nb = src.nb;
-        tab = new bouton*[nb];
-        for(int i =0; i<nb ; i++){
-            tab[i]=new bouton(*(src.tab[i]));
-        }
-    }
-        void menu2::affiche(){
-        for (int i = 0; i <nb;i++){
-            tab[i]->affiche(); //appel a la fonction affiche des boutons.
-        }
-    }
-        menu2& menu2::operator=(const menu& src){
-        if(this != &src){
-        for(in i = 0; i<nb;i++){
-            delete(tab[i]);
-        }
-        delete tab;
-        for(int i =0; i<nb ; i++){
-            tab[i]=new bouton(*(src.tab[i]));
-        }
-        }
-        return *this;
-    }
-}
-*/
 
 int main()
 {
+    srand((unsigned) time(NULL));
     int e,raquetteColor;
     int flagQuit = 0;
     allegro_init();
@@ -230,56 +31,78 @@ int main()
 
     set_mouse_sprite(NULL);
     show_mouse(screen);
-    set_keyboard_rate(10,20);
+    set_keyboard_rate(10,2);
+    bmap = create_bitmap(640,480);
 
-/**********************************************TEST MUR DE BRIQUE*********************************************/
 
+/**********************************************INITIALISATION MUR DE BRIQUE*********************************************/
 
+/*
     list<brique*> liste_briques;
 
     point x=point(20,20);
     point y=point(60,60);
 
-    brique * p_brique;
 
+    murBrique mur = murBrique(liste_briques);
 
-    murBrique test = murBrique(liste_briques);
+    mur.faireCadre();
+    mur.construireMur(7,7);
+*/
 
-    brique bite;
+/*****************************************************INITIALISATION RAQUETTE****************************************************/
 
-    test.construireMur(5,7);
-
-        test.affiche();
-        readkey();
-/*****************************************************TEST RAQUETTE****************************************************/
 /*
     raquetteColor = makecol(234,124,12);
-    point a(10,10);
-    point b(70,30);
-    raquette raquette(a,b,raquetteColor);
-    raquette.affiche();
-while(!flagQuit){
-    e = readkey();
-    if(e==15131){
-        flagQuit = 1;
-        exit(EXIT_SUCCESS);
-    }
-    else{
-        raquette.deplace(e,5);
-    }
-}
-/*****************************************************TESTS BALLE********************************************************/
-/*
-        point b(mouse_x,mouse_y);
-        balle ball(SCREEN_H/2,SCREEN_W/2,SCREEN_H/20);
-        while(1){
-        ball.deplace(mouse_x,mouse_y,1);
-        test.affiche();
-        }
-    e = readkey();
-    if(e==15131){
-        flagQuit = 1;
-        exit(EXIT_SUCCESS);
-    }
+    raquette pad = raquette();
+    point a(SCREEN_W/2-35,SCREEN_H-40);
+    point c(SCREEN_W/2+35,SCREEN_H-20);
+    pad.setP1(a);
+    pad.setP2(c);
+    pad.setColor(makecol(127,125,255));
 */
+
+/*****************************************************INITIALISATION BALLE********************************************************/
+
+/*
+    point b = point(SCREEN_W/2,pad.getP1().gety() - SCREEN_H/40);
+    balle ball(b,SCREEN_H/40,makecol(12,123,123));
+
+    e = readkey();
+    if(e==15131){
+        flagQuit = 1;
+        exit(EXIT_SUCCESS);
+    }
+    cout << "RAYON : "<<ball.getRayon()<<endl;
+*/
+
+/************************************************************JEU***************************************************************/
+
+/*
+    while(!key[KEY_ESC]){
+        clear_bitmap(bmap);
+        flagQuit = 1;
+        pad.deplace(1);
+        mur.affiche();
+        ball.collision(&mur);
+        ball.collision(pad);
+        cout<< " x ;  y : " << ball.getPointCentre().getx()<< " ; " << ball.getPointCentre().gety() << endl;
+        //ball.collision();
+        ball.deplace(1);
+        blit(bmap, screen,0,0,0,0,640,480);
+    }
+
+    exit(EXIT_SUCCESS);
+    destroy_bitmap(bmap);
+*/
+/*******************************************************TEST BOUTONS**********************************************************/
+
+destroy_bitmap(bmap);
+point p1 = point(100,100);
+point p2 = point(300,200);
+rectangle newGame(p1,p2);
+newGame.affiche();
+blit(bmap, screen,0,0,0,0,640,480);
+readkey();
+exit(EXIT_SUCCESS);
 }END_OF_MAIN() ;

@@ -4,6 +4,7 @@
 #include <allegro.h>
 #include <iostream>
 
+extern BITMAP* bmap;
 using namespace std;
 
     raquette::raquette(): rectangle(){}
@@ -14,45 +15,31 @@ using namespace std;
     raquette::raquette(int x1, int x2, int y1, int y2, int color) : rectangle(x1,x2,y1,y2,color){}
 
     void raquette::affiche(){
-        rectfill(screen, getP1().getx(), getP1().gety(), getP2().getx(), getP2().gety(), m_couleur);
-    }
-
-    void raquette::efface(){
-        int temp;
-        temp=m_couleur;
-        setColor(makecol(0,0,0));
-        affiche();
-        setColor(temp);
+        rectfill(bmap, getP1().getx(), getP1().gety(), getP2().getx(), getP2().gety(), m_couleur);
     }
 
 
-    void raquette::deplace(int e, int depl){
+    void raquette::deplace(int depl){
 
-        switch(e){
-        case 20992 :
-            if(p1.getx()> 0){
-                efface();
+        if(key[KEY_LEFT]){
+            if(p1.getx()> 12){
                 p1.setx(p1.getx()-depl);
-                p2.setx(p2.getx()-depl);
-                setColor(m_couleur);
-                cout<<"p1 : "<<p1.getx()<<endl<<"p2 : "<<p2.getx()<<endl<<"longueur : "<<p2.getx()-p1.getx()<<endl;
-                affiche();
+                p2.setx(p1.getx()+70);
             }
-            else{
-            cout<<"rien"<<endl;
-            }
-        break;
-        case 21248 :
-            if(p2.getx()<600){
-                efface();
+            affiche();
+        }
+        else if(key[KEY_RIGHT]){
+            if(p2.getx()<502){
                 p2.setx(p2.getx()+depl);
-                p1.setx(p1.getx()+depl);
-                setColor(m_couleur);
-                cout<<"p1 : "<<p1.getx()<<endl<<"p2 : "<<p2.getx()<<endl<<"longueur : "<<p2.getx()-p1.getx()<<endl;
-                affiche();
-            }
+                p1.setx(p2.getx()-70);
 
-        break;
+                /*cout<<"p1 : "<<p1.getx()<<endl<<"p2 : "<<p2.getx()<<endl<<"longueur : "<<p2.getx()-p1.getx()<<endl;
+                cout<<"p1 y: "<<p1.gety()<<endl<<"p2 y: "<<p2.gety()<<endl<<"largeur : "<<p2.gety()-p1.gety()<<endl;*/
+            }
+            affiche();
+        }
+        else{
+            affiche();
         }
     }
     raquette::~raquette(){}

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1495451138 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\main.cpp
+1496757609 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\main.cpp
 	<iostream>
 	<allegro.h>
 	"point.h"
@@ -9,29 +9,34 @@
 	"raquette.h"
 	"balle.h"
 	<list>
+	<chrono>
+	<thread>
+	<winalleg.h>
 
-1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\point.h
+1496740922 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\point.h
 
-1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.h
+1496240997 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.h
 	"point.h"
 	"forme.h"
 
-1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\point.cpp
+1496753046 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\point.cpp
 	<allegro.h>
 	<iostream>
 	"point.h"
 
-1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.cpp
+1496741797 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\rectangle.cpp
 	"rectangle.h"
+	<iostream>
+	<allegro.h>
 
 1495120166 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\forme.h
 
-1495129616 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.cpp
+1496240997 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.cpp
 	"brique.h"
 	<allegro.h>
 	<iostream>
 
-1495126536 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.h
+1496738460 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\brique.h
 	"point.h"
 	"rectangle.h"
 	"forme.h"
@@ -39,13 +44,19 @@
 1495120166 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\forme.cpp
 	"forme.h"
 
-1495447591 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.cpp
+1496749891 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.cpp
 	<list>
 	"murBrique.h"
+	<allegro.h>
+	<iostream>
+	"briquenormale.h"
+	"brique.h"
 
-1495448277 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.h
+1496750030 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\murbrique.h
 	<list>
 	"brique.h"
+	"raquette.h"
+	"briquenormale.h"
 
 1495148354 source:c:\users\cfr\desktop\samir\c\kassbrik-master\brique.cpp
 	"brique.h"
@@ -238,22 +249,132 @@
 	<list>
 	"murBrique.h"
 
-1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\balle.cpp
+1496758814 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\balle.cpp
 	<iostream>
 	<allegro.h>
+	<math.h>
 	"balle.h"
-
-1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\balle.h
-	"forme.h"
+	<ctime>
 	"point.h"
 
-1495443308 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\raquette.h
+1496751446 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\balle.h
+	"forme.h"
+	"point.h"
+	"murbrique.h"
+
+1496240997 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\raquette.h
 	"point.h"
 	"rectangle.h"
 	"forme.h"
 
-1495443308 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\raquette.cpp
+1496240997 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\raquette.cpp
 	"raquette.h"
 	<allegro.h>
 	<iostream>
+
+1496738452 source:c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\briquenormale.cpp
+	"briquenormale.h"
+	"murbrique.h"
+
+1496738469 c:\users\aurel\desktop\programation\codeblocks\tp_cassebrik\briquenormale.h
+	"brique.h"
+
+1496831196 source:\\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\balle.cpp
+	<iostream>
+	<allegro.h>
+	<math.h>
+	"balle.h"
+	<ctime>
+	"point.h"
+
+1496831196 \\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\balle.h
+	"forme.h"
+	"point.h"
+	"murbrique.h"
+
+1496831175 \\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\forme.h
+
+1496831198 \\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\point.h
+
+1496831197 \\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\murbrique.h
+	<list>
+	"brique.h"
+	"raquette.h"
+	"briquenormale.h"
+
+1496831197 \\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\brique.h
+	"point.h"
+	"rectangle.h"
+	"forme.h"
+
+1496836266 \\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\rectangle.h
+	"point.h"
+	"forme.h"
+
+1496831198 \\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\raquette.h
+	"point.h"
+	"rectangle.h"
+	"forme.h"
+
+1496831197 \\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\briquenormale.h
+	"brique.h"
+
+1496831197 source:\\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\brique.cpp
+	"brique.h"
+	<allegro.h>
+	<iostream>
+
+1496831197 source:\\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\briquenormale.cpp
+	"briquenormale.h"
+	"murbrique.h"
+
+1496831175 source:\\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\forme.cpp
+	"forme.h"
+
+1496841222 source:\\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\main.cpp
+	<iostream>
+	<allegro.h>
+	"point.h"
+	"rectangle.h"
+	"brique.h"
+	"murbrique.h"
+	"raquette.h"
+	"balle.h"
+	<list>
+	<chrono>
+	<thread>
+
+1496831197 source:\\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\murbrique.cpp
+	<list>
+	"murBrique.h"
+	<allegro.h>
+	<iostream>
+	"briquenormale.h"
+	"brique.h"
+
+1496831198 source:\\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\point.cpp
+	<allegro.h>
+	<iostream>
+	"point.h"
+
+1496831198 source:\\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\raquette.cpp
+	"raquette.h"
+	<allegro.h>
+	<iostream>
+
+1496840257 source:\\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\rectangle.cpp
+	"rectangle.h"
+	<iostream>
+	<allegro.h>
+
+1496841701 source:\\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\bouton.cpp
+	"Bouton.h"
+	<allegro.h>
+	<iostream>
+
+1496841643 \\merlin\etudiants\alicherifs\downloads\kassbrik\kassbrik\bouton.h
+	"rectangle.h"
+	"point.h"
+	<iostream>
+	<string>
 
